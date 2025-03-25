@@ -1,0 +1,25 @@
+/Turu
+├── core/
+│   ├── ai_engine/          # Ollama integration & AI processing
+│   │   ├── local_models/   # Ollama model files
+│   │   ├── processor.go    # AI inference engine
+│   │   └── ollama_api.sh   # Model management
+├── hardware/
+│   ├── control/            # Hardware interfaces
+│   │   ├── sensors.py      # Sensor data collection
+│   │   └── actuators.py    # Device control
+├── services/
+│   ├── networking/         # Go HTTP service
+│   │   ├── main.go         # Restart service
+│   │   └── auth.go         # JWT authentication
+├── life_ai/
+│   ├── analyze_user_data.sh# Habit analysis
+│   └── collect_user_data.sh# Data collection
+├── scripts/
+│   ├── main_module.sh      # Master orchestrator
+│   └── automation/         # System tasks
+├── tests/
+│   └── run_all_tests.sh    # Test framework
+└── config/
+    ├── env.example         # Configuration template
+    └── turu.cfg           # Runtime settings
