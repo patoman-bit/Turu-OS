@@ -1,0 +1,2 @@
+# Turu-OS
+Ai adaptive 
