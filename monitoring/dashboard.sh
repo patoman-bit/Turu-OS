@@ -1,5 +1,17 @@
-#!/bin/bash
+ #!/bin/bash
 # Real-time monitoring dashboard
+
+use std::fs::OpenOptions;
+use std::io::Write;
+
+pub fn log_event(message: &str) {
+    let mut file = OpenOptions::new()
+        .create(true)
+        .append(true)
+        .open("system_log.txt")
+        .unwrap();
+    writeln!(file, "{}", message).unwrap();
+}
 
 watch -n 1 -c '
     echo "=== TURU SYSTEM STATUS ==="
