@@ -1,6 +1,12 @@
 #!/bin/bash
 # Master Orchestrator v2.0
 
+fn main() {
+    println!("Booting Turu-OS...");
+    turu_os::core::init_kernel();
+    turu_os::services::main_cli::launch_cli();
+}
+
 source ./config/turu.cfg
 MODES=("normal" "power_saver" "high_performance")
 
